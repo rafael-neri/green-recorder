@@ -3,12 +3,14 @@
 
 Name: green-recorder
 Summary: A simple yet functional desktop recorder for Linux systems. Supports both Xorg server and Wayland (GNOME).
-URL: https://foss-project.com
-Version: 3.0.6
+URL: https://github.com/foss-project/green-recorder/
+Version: 3.2.3
 Release: 1%{?dist}
-Source: https://github.com/%{owner}/%{name}/archive/%{version}/%{version}.tar.gz
+Source: https://github.com/%{owner}/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 License: GPLv3
 BuildArch: noarch
+BuildRequires: python2
+BuildRequires: python
 BuildRequires: python2-devel
 Requires: python2
 Requires: python2-pydbus
@@ -41,6 +43,30 @@ python setup.py install -O1 --root=$RPM_BUILD_ROOT
 %{_datadir}/pixmaps/%{name}.png
 
 %changelog
+* Sun May 26 2019 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.2.3
+- Removed notifications being sent on recording/stopping.
+- Fixed wrong version number.
+
+* Sun Feb 17 2019 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.2.2
+- Various bug fixes.
+
+* Sun Feb 10 2019 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.2.1
+- Fixed the stop button not working.
+- Fixed the options list missing icon.
+
+* Mon Feb 04 2019 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.2
+- Enhanced the UI.
+- Restored system tray icon.
+- Removed preferences window. Now the program will use the same options just when you closed it last time.
+- Now the program auto-hides its window on recording, and auto-shows when it's stopped.
+- Added a stop notification when recording stops.
+- Added various translations.
+- Various bug fixes.
+
+* Sun Oct 29 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.1
+- Removed system tray icon and added close button.
+- Fixed #68, #70 and #77.
+
 * Fri Oct 20 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.6
 - Fixed #73.
 
@@ -48,26 +74,26 @@ python setup.py install -O1 --root=$RPM_BUILD_ROOT
 - Fixed small issues evreywhere.
 - Restructured UI.
 
-* Sun Aug 8 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.4
+* Tue Aug 08 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.4
 - Fixed small issues evreywhere.
 - Removed Wayland pipeline editing option.
 - Reworked UI.
 - Updated translation template.
 - Fixed applet on MATE.
 
-* Sat Aug 7 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.3
+* Mon Aug 07 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.3
 - Fixed small issues.
 
-* Fri Aug 6 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.2
+* Sun Aug 06 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.2
 - Fixed #46.
 
-* Fri Aug 6 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.1.1
+* Sun Aug 06 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.1.1
 - A small fix for UI warning.
 
-* Fri Aug 6 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.1
+* Sun Aug 06 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0.1
 - A small fix for UI warning.
 
-* Fri Aug 6 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0
+* Mon Aug 06 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 3.0
 - GIF format support is now available!
 - Added ability to choose the audio input source.
 - Preferences window was added to allow setting default values. You can now also edit the default Wayland pipeline.
@@ -79,7 +105,7 @@ python setup.py install -O1 --root=$RPM_BUILD_ROOT
 - Introduced a better detection method for the running display server, adding possibility to support other servers in the future with no problem.
 - Various fixes and edits everywhere.
 
-* Tue Jun 6 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 2.2
+* Tue Jun 06 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 2.2
 - Added localization support.
 - Added Arabic language.
 - Changed window opacity to 1.00
@@ -117,4 +143,3 @@ python setup.py install -O1 --root=$RPM_BUILD_ROOT
 
 * Tue Feb 14 2017 M.Hanny Sabbagh <mhsabbagh@outlook.com> 1.1.2
 - Version 1.1.2. 
-

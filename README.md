@@ -1,8 +1,8 @@
-[![Snap Status](https://build.snapcraft.io/badge/foss-project/green-recorder.svg)](https://build.snapcraft.io/user/foss-project/green-recorder)
+# This project is archived, it's no longer under development. As the original developer, the work of maintaining and updating this program takes too much of my time, which I was giving for free, and I am no longer interested in working with things like ffmpeg/wayland/GNOME's screencaster or solving the issues related to them or why they don't work. If you would like to continue development, please feel free to fork the project according to the GPL license.
 
 # Green Recorder
 
-![Green Recorder](https://i.imgur.com/mg96c5Q.png)
+![Green Recorder](https://i.ibb.co/b1831W0/Screenshot-from-2019-03-21-12-21-02.png)
 
 ## About
 
@@ -10,14 +10,7 @@ A simple desktop recorder for Linux systems. Built using Python, GTK+ 3 and ffmp
 
 The following formats are currently supported: **mkv**, **avi**, **mp4**, **wmv**, **gif** and **nut** (And only WebM for Wayland's GNOME session). You can stop the recording process easily by right-clicking the icon and choosing "Stop Record". Or middle-clicking the recording icon in the notifications area (but doesn't work on all interfaces).
 
-You can choose the audio input source you want from the list. You can also set the default values you want from the preferences window. And a lot more.
-
-Here's a GIF image recorded with Green Recorder for Green Recorder:
-
-![Green Recorder](https://media.giphy.com/media/3o6vXLgAWsH8qAcpDa/giphy.gif)
-
-Please, consider supporting us on Patreon if you like the software. More features and new versions would be released with each goal we achieve there: https://www.patreon.com/fossproject
-
+You can choose the audio input source you want from the list. You can also set the default values you want by simply changing them in the interface, and the program will save them for you for the next time you open it.
 
 ### How it works?
 
@@ -37,7 +30,7 @@ Alternatively, you can open the green-recorder.pot file using programs like PoEd
 
 ## Download
 
-### Ubuntu 16.04/16.10/17.04/17.10 or Linux Mint 18/18.1/18.2
+### Ubuntu 18.04/18.10/19.04 or Linux Mint 19/19.1
 
 Make sure you have enabled the multiverse and universe repositories before trying to install the program from the PPA (to be able to download the dependencies). You can install Green Recorder from the following PPA:
 
@@ -45,40 +38,6 @@ Make sure you have enabled the multiverse and universe repositories before tryin
     sudo apt update
     sudo apt install green-recorder
 
-### Debian
-
-You can grab the Debian packages directly from the PPA itself and install it on any Debian distribution. You mainly need the "green-recorder" package and "python-pydbus". Other dependancies (like ffmpeg) are probably in Debian repositories: http://ppa.launchpad.net/fossproject/ppa/ubuntu/
-
-### Fedora 24/25/26/Rawhide
-
-To install Green Recorder on Fedora 24:
-
-    sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:mhsabbagh/Fedora_24/home:mhsabbagh.repo
-    sudo dnf install green-recorder
-
-Fedora 25:
-
-    sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:mhsabbagh/Fedora_25/home:mhsabbagh.repo
-    sudo dnf install green-recorder
-
-Fedora 26:
-
-    sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:mhsabbagh/Fedora_26/home:mhsabbagh.repo
-    sudo dnf install green-recorder
-
-Fedora Rawhide:
-
-    sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:mhsabbagh/Fedora_Rawhide/home:mhsabbagh.repo
-    sudo dnf install green-recorder
-
-### CentOS 7
-
-Run the following commands as root:
-
-    cd /etc/yum.repos.d/
-    wget http://download.opensuse.org/repositories/home:mhsabbagh/CentOS_7/home:mhsabbagh.repo
-    yum install green-recorder
-     
 ### Arch Linux
 
 You can install Green recorder using your [AUR helper](https://wiki.archlinux.org/index.php/AUR_helpers):
